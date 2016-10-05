@@ -4,11 +4,11 @@ const router = express.Router()
 
 
 router.get('/', function(req,res,next){
-  res.render('home')
+  res.render('master')
 })
 
 router.get('/items', function(req,res,next){
-  res.render('page/items')
+  res.render('item')
 })
 
 module.exports = router
