@@ -3,10 +3,11 @@ const app = express()
 const bodyParser = require('body-parser')
 var port = process.env.PORT || 8080
 var mongoose = require('mongoose')
-
+var cors = require('cors')
 
 mongoose.connect('mongodb://localhost/expresstutor')
 
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
